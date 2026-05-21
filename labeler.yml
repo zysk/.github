@@ -1,0 +1,42 @@
+# PR auto-labeler config — used by workflows/labeler.yml
+# Maps file path patterns to labels. Only include high-signal mappings.
+# Syntax: https://github.com/actions/labeler#create-configuration
+#
+# NOTE: Copy this file to individual repos and customize as needed.
+# Only include mappings that are high-signal for YOUR project.
+
+"type: docs":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "docs/**"
+          - "*.md"
+          - "!src/**/*.md"
+
+"type: test":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/__tests__/**"
+          - "**/*.test.ts"
+          - "**/*.test.tsx"
+          - "**/*.spec.ts"
+          - "**/*.spec.tsx"
+
+"type: chore":
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/**"
+          - "*.config.*"
+          - "*.json"
+          - "!package.json"
+          - "Dockerfile"
+          - "docker-compose*.yml"
+          - ".eslintrc*"
+          - ".prettierrc*"
+
+"dependencies":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "package.json"
+          - "package-lock.json"
+          - "yarn.lock"
+          - "pnpm-lock.yaml"
