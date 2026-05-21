@@ -1,23 +1,51 @@
-name: ✨Feature Request
-description: Request a new feature or enhancement
-labels: ["enhancement"]
+name: "✨ Feature Request"
+description: Suggest a new feature or enhancement
 title: "[FEAT]: "
+labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
       value: |
-        Please make sure this feature request hasn't been already submitted by someone by looking through other open/closed issues
-  
+        Thanks for suggesting an improvement! Please fill in as much detail as possible.
+        Check if a similar request already exists before submitting.
+
   - type: textarea
-    id: description
+    id: problem
     attributes:
-      label: Description
-      description: Give us a brief description of the feature or enhancement you would like
+      label: Problem Statement
+      description: What problem does this feature solve? What pain point are you experiencing?
+      placeholder: "I'm always frustrated when..."
     validations:
       required: true
-      
+
   - type: textarea
-    id: additional-information
+    id: proposed-solution
     attributes:
-      label: Additional Information
-      description: Give us some additional information on the feature request like proposed solutions, links, screenshots, etc.
+      label: Proposed Solution
+      description: Describe the solution you'd like to see.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternative solutions or workarounds?
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      description: Is this a brand-new feature or an improvement to something existing?
+      options:
+        - "Enhancement — improvement to an existing feature"
+        - "New Feature — functionality the app doesn't have today"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Mockups, screenshots, diagrams, or links that illustrate the idea.
+—
