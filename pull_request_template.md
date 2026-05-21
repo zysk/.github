@@ -1,32 +1,42 @@
-# Pull Request
+## Summary
 
-## Description
+Closes #<!-- Issue number -->
 
-Please include a summary of the change and which issue is fixed. Also, include relevant motivation and context. List any dependencies that are required for this change.
+<!-- Briefly describe what this PR does and why. -->
 
-Fixes # (issue reference)
+## Type of Change
 
-## Type of change
+<!-- Pick the one that applies and delete the rest -->
 
-Please delete options that are not relevant.
+- [ ] `bug` — fix for broken behavior
+- [ ] `feature` — brand-new functionality
+- [ ] `enhancement` — improvement to existing feature
+- [ ] `refactor` — code restructure, no behavior change
+- [ ] `tech-debt` — cleanup, modernization
+- [ ] `docs` — documentation only
+- [ ] `test` — tests only
+- [ ] `chore` — build, tooling, config
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] This change requires a documentation update
+## Changes
 
-## How Has This Been Tested?
+<!-- Bullet points of what changed -->
 
-Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration.
+-
 
-- [ ] Test A
-- [ ] Test B
+## Testing
 
-## Checklist:
+<!-- How did you verify this works? -->
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
-- [ ] Any dependent changes have been merged and published in downstream modules
+## Screenshots
+
+<!-- If this has UI changes, add before/after screenshots or a screen recording -->
+
+## Checklist
+
+- [ ] Self-reviewed the diff
+- [ ] No unnecessary console logs, commented-out code, or debug artifacts
+- [ ] Added / updated tests where applicable
+- [ ] Checked for breaking changes — existing functionality still works
+- [ ] Updated relevant documentation (README, comments, etc.)
+- [ ] Tested on mobile viewport (if UI change)
+- [ ] No new lint or type-check errors (`npm run lint` / `npm run type-check`)
