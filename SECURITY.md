@@ -1,99 +1,67 @@
-# Security Policy - Zysk Technologies
+# Security Policy
 
-## Our Security Commitment
+## Supported Versions
 
-At Zysk Technologies, security isn't just about code—it's about protecting our clients' trust and our reputation built over 11 years.
+We actively address security vulnerabilities in the current production branch. Older versions are not guaranteed to receive security patches unless explicitly stated in the specific repository.
 
-## For Zysk Team Members
+## Reporting a Vulnerability
 
-### Reporting Security Issues
+**Please do not report security vulnerabilities through public GitHub issues.**
 
-If you discover a security vulnerability in any Zysk project:
+### For Zysk Team Members
 
-**1. Client Projects:**
-- Immediately notify the project lead via Slack DM
-- Email: nagendra.kv@zysk.tech with subject: `[SECURITY] [Client Name] - Brief Description`
-- Do NOT commit any fixes until discussed with project lead
-- Client security issues are handled on a case-by-case basis
+If you discover a security vulnerability in any Zysk project, use the private reporting channel appropriate to the project type:
 
-**3. Internal Tools/Infrastructure:**
-- Email: nagendra.kv@zysk.tech, shilpa@zysk.tech
+**Client Projects**
+- Notify the project lead immediately via Slack DM
+- Do NOT commit any fix, workaround, or reference to the issue until discussed with the project lead
+- Client security issues are handled on a case-by-case basis with the client
 
-### What Constitutes a Security Issue?
+**Internal Tools & Infrastructure**
+- Use GitHub's built-in private security advisory feature (see below)
+- Or contact the engineering lead directly via Slack
 
-**Report immediately:**
-- Exposed API keys, credentials, or secrets in code
-- Authentication/authorization bypasses
-- SQL injection, XSS, or other injection vulnerabilities
-- Data exposure (client data, user data, internal data)
-- Vulnerable dependencies flagged as CRITICAL by Dependabot
+### For External Contributors
+
+Please use **GitHub Private Security Advisories** to report vulnerabilities:
+
+1. Go to the **Security** tab of the affected repository
+2. Click **"Report a vulnerability"**
+3. Fill in the advisory form with as much detail as possible
+
+This ensures the report is private, tracked, and can be coordinated for responsible disclosure.
+
+## What to Report
+
+Please report immediately:
+
+- Exposed API keys, credentials, or secrets committed to code
+- Authentication or authorization bypasses
+- SQL injection, XSS, CSRF, or other injection vulnerabilities
+- Sensitive data exposure (client data, user data, internal data)
+- Vulnerable dependencies flagged as **Critical** severity
 - Production database access issues
+- Any vulnerability that could affect client systems or data
 
-**Not security issues (but still important):**
-- General bugs → Use bug report template
-- Code quality issues → Raise in code review
-- Performance problems → Discuss with team lead
+## Response Timeline
 
-### Security Response Process
+| Step | Target Timeframe |
+|------|-----------------|
+| Acknowledgement | Within 48 hours |
+| Initial assessment | Within 5 business days |
+| Fix or mitigation | Depends on severity — Critical within 24h, High within 7 days |
+| Disclosure | Coordinated with reporter |
 
-1. **Acknowledgment:** Within 1 hour
-2. **Assessment:** Project lead evaluates severity
-3. **Action:** 
-   - Client projects: Coordinate with client as needed
-   - Internal tools: Based on impact
-4. **Post-fix:** Team review to prevent similar issues
+## Security Best Practices for Zysk Repositories
 
-## Daily Security Practices
-
-### Before You Commit
-
-- [ ] No hardcoded credentials (API keys, passwords, tokens)
-- [ ] No client-specific data in code comments
-- [ ] `.env` files are in `.gitignore`
-- [ ] Sensitive configuration uses environment variables
-
-### Code Review Checklist
-
-When reviewing PRs, watch for:
-- Exposed secrets or credentials
-- SQL queries without parameterization
-- User input not validated/sanitized
-- Authentication/authorization logic changes
-- New dependencies (check Dependabot alerts)
-
-### Dependabot Alerts
-
-Dependabot is enabled org-wide. When you receive an alert:
-
-**Critical/High severity:**
-1. Review the alert within 4 hours
-2. Update dependency or discuss alternative fix with team
-3. Test thoroughly before merging
-4. Deploy fix within 1 day
-
-**Medium/Low severity:**
-1. Include in next regular sprint
-2. Batch similar updates together
-3. No need for immediate action unless part of active development
-
-## Client Data Protection
-
-**Remember:**
-- Client code and data are confidential
-- Never share client repository access outside the assigned team
-- Client credentials should be in password manager (not GitHub)
-- Production database access requires two-person approval
-
-## Security Tools We Use
-
-- **Dependabot:** Enabled on all repos (auto-alerts for vulnerabilities)
-- **Code Review:** Mandatory for all production changes
-
-## Questions?
-
-**For security process questions:** nagendra.kv@zysk.tech or ask in team standup
+- Never commit secrets, API keys, or credentials — use environment variables
+- Add `.env` and credential files to `.gitignore`
+- Use `dependabot` for automated dependency updates
+- Review Dependabot alerts weekly — address Critical and High within SLA
+- Enable branch protection on `main` and `dev` branches
+- Require PR reviews before merging to protected branches
 
 ---
 
-**Last Updated:** January 2026  
-**Maintained by:** Shilpa VP
+_This policy applies to all repositories under the Zysk Technologies organization._
+_Last reviewed: May 2026_
