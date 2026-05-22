@@ -1,0 +1,6 @@
+{
+    "name": "Stale Issue and PR Cleanup",
+    "description": "Auto-labels inactive issues after 60 days and PRs after 30 days, then closes them. Keeps your backlog clean.",
+    "iconName": "octicon-archive",
+    "categories": ["Automation"]
+}
