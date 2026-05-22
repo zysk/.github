@@ -1,29 +1,44 @@
-![Zysk Technologies — Success reimagined with tech](./banner.png)
+![Zysk Technologies – Success reimagined with tech](./banner.png)
 
 # Zysk Technologies
 
-**Building reliable digital products for businesses that need to move fast.**
+AI-first engineering. Built for the future.
 
 ## About Us
 
-Zysk Technologies is a software development company with over a decade of experience building web and mobile applications for clients across industries. We specialize in turning product ideas into production-grade software — with a focus on code quality, delivery speed, and long-term maintainability.
+Zysk Technologies is an AI-first software development company. We design and build intelligent digital products that leverage the power of modern AI — from LLM-powered applications to automated workflows and smart infrastructure.
 
-We work closely with startups, scale-ups, and established businesses as a trusted engineering partner.
+With over a decade of engineering experience, we help startups, scale-ups, and established businesses integrate AI into the core of their products — not as an afterthought, but as a foundation.
+
+We are a **Laravel Certified** company and bring deep expertise across the full modern stack — from Python-powered AI backends to robust Laravel APIs and React frontends.
+
+We are not just keeping up with the AI revolution. We are building it.
 
 ## What We Build
 
-- **Web Applications** — React, Next.js, and Node.js
-- **Mobile Applications** — React Native
-- **APIs & Backend Systems** — REST, GraphQL
-- **Cloud Infrastructure** — AWS, GCP, Vercel
-- **AI-Powered Products** — LLM integrations, automation workflows
+- **AI-Powered Applications** — LLM integrations, RAG pipelines, AI agents, and automation workflows
+- **Web Applications** — React, Next.js, and Node.js with AI-enhanced user experiences
+- **Backend Systems** — Python (FastAPI, Django), PHP Laravel *(Laravel Certified)*, and Node.js
+- **Mobile Applications** — React Native with intelligent, context-aware features
+- **APIs & Integrations** — REST, GraphQL, and AI-native service architectures
+- **Cloud Infrastructure** — AWS, GCP, Vercel — optimized for AI workloads
+
+## Our AI-First Approach
+
+Every product we build is evaluated through an AI lens:
+
+- Can this workflow be automated or enhanced with AI?
+- Can this UI be made smarter with personalization or prediction?
+- Can this system make better decisions with machine learning?
+
+We embed AI thinking into product strategy, architecture, and implementation — helping our clients ship products that are faster, smarter, and more competitive. Our Python expertise powers our AI/ML pipelines, while our Laravel-certified engineers ensure enterprise-grade backend reliability.
 
 ## Engineering Standards
 
 All Zysk projects follow organization-wide standards maintained in this `.github` repository:
 
 | Standard | Details |
-|----------|---------|
+|---|---|
 | 📡 Issue Templates | Bug reports, feature requests, and internal task tracking |
 | 🔀 PR Template | Type taxonomy, checklist, and screenshots for all changes |
 | 🛡️ Security Policy | Responsible disclosure via GitHub Private Advisories |
@@ -32,10 +47,10 @@ All Zysk projects follow organization-wide standards maintained in this `.github
 
 ## Working With Us
 
-Interested in working with Zysk Technologies? We'd love to hear about your project.
+Building something that needs AI at its core? We'd love to hear about your project.
 
 → **Contact us at [zysk.tech](https://zysk.tech)**
 
 ---
 
-*Zysk Technologies — Engineering excellence, delivered.*
+*Zysk Technologies — AI-first engineering, delivered.*
