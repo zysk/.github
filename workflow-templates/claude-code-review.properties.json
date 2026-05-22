@@ -1,0 +1,6 @@
+{
+  "name": "Claude Code Review",
+  "description": "AI-powered pull request code review using Claude. Reviews for correctness, security, performance, and maintainability. Requires ANTHROPIC_API_KEY secret.",
+  "iconName": "octicon-shield-check",
+  "categories": ["Code quality"]
+}
