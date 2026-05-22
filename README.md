@@ -14,7 +14,8 @@ GitHub automatically applies templates and configuration files from this reposit
 |---|---|
 | `ISSUE_TEMPLATE/` | Standardized templates for bug reports, feature requests, and internal task tracking |
 | `profile/README.md` | Organization profile page shown on [github.com/zysk](https://github.com/zysk) |
-| `workflows/` | Reusable GitHub Actions workflows (AI code review, stale cleanup, PR labeling) |
+| `workflows/` | Workflow logic files — currently being migrated to `workflow-templates/` |
+| `workflow-templates/` | Starter workflow templates — appear as one-click suggestions in the Actions tab of every org repo |
 | `pull_request_template.md` | PR checklist with label taxonomy, linked issues, and review criteria |
 | `CONTRIBUTING.md` | Branch strategy, commit conventions, and the full contribution process |
 | `CODE_OF_CONDUCT.md` | Standards for respectful collaboration across all Zysk projects |
@@ -46,7 +47,7 @@ For detailed guidance on branching, commit format, and the review process, read 
 
 ## Automated Workflows
 
-This repository includes reusable GitHub Actions workflows applied organization-wide:
+These workflows are available as **starter templates** in the `workflow-templates/` folder. They appear as one-click suggestions when any org repo goes to **Actions → New workflow**:
 
 - **AI Code Review** — Triggered on every PR; uses Claude to surface potential issues before human review.
 - **Stale Issue Cleanup** — Automatically labels and closes inactive issues and PRs.
