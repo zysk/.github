@@ -1,0 +1,50 @@
+name: Claude Code Review
+
+# AI-powered code review on pull requests.
+# Triggers only on source code changes to avoid noise on docs/config PRs.
+#
+# SETUP REQUIRED:
+# 1. Add ANTHROPIC_API_KEY to your repository secrets
+# 2. Customize the paths filter below for your project structure
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - "src/**/*.ts"
+      - "src/**/*.tsx"
+      - "src/**/*.js"
+      - "src/**/*.jsx"
+      - "src/**/*.py"
+      - "src/**/*.go"
+      - "app/**/*.php"
+
+jobs:
+  claude-review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+      issues: read
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Run Claude Code Review
+        uses: anthropics/claude-code-action@beta
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          direct_prompt: |
+            Review this pull request for:
+            1. Correctness and logic errors
+            2. Security vulnerabilities (injection, auth bypasses, exposed secrets)
+            3. Performance issues
+            4. Code quality and maintainability
+            5. Missing error handling
+
+            Be concise. Skip comments on style/formatting (handled by linter).
+            Only flag issues that genuinely need attention.
