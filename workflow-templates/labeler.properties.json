@@ -1,0 +1,6 @@
+{
+    "name": "PR Auto-Labeler",
+    "description": "Automatically labels PRs based on changed file paths. Requires a labeler.yml config in the repo root defining label-to-path mappings.",
+    "iconName": "octicon-tag",
+    "categories": ["Automation"]
+}
