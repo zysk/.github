@@ -63,7 +63,15 @@ body:
         - Browser:
         - Node version:
 
+  - type: input
+    id: version
+    attributes:
+      label: Version / Release
+      description: What version or release of the product are you on? (e.g. v2.1.0, staging, main branch)
+      placeholder: "e.g. v2.1.0"
+
   - type: textarea
     id: additional-information
     attributes:
-      label: Additional Context
+      label: Additional Information
+      description: Any other context, logs, or screenshots that might help.
