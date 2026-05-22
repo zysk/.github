@@ -54,7 +54,7 @@ This repository includes reusable GitHub Actions workflows applied organization-
 
 ## Questions?
 
-Reach out to the engineering team lead or post in the `#engineering` channel on Teams.
+Reach out to [shilpa@zysk.tech](mailto:shilpa@zysk.tech) for any questions.
 
 ---
 
