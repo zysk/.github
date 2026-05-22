@@ -25,11 +25,11 @@ Closes #<!-- Issue number -->
 
 ## Testing
 
-<!-- How did you verify this works? -->
+<!-- How did you test this? What cases did you cover? -->
 
 ## Screenshots
 
-<!-- If this has UI changes, add before/after screenshots or a screen recording -->
+<!-- If this is a UI change, add before/after screenshots -->
 
 ## Checklist
 
@@ -40,3 +40,6 @@ Closes #<!-- Issue number -->
 - [ ] Updated relevant documentation (README, comments, etc.)
 - [ ] Tested on mobile viewport (if UI change)
 - [ ] No new lint or type-check errors (`npm run lint` / `npm run type-check`)
+- [ ] No new environment variables added without updating `.env.example` and notifying the team
+- [ ] No database migrations included, OR migrations are reversible and have been reviewed
+- [ ] Tested on staging / dev environment (for client project PRs)
